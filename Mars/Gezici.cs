@@ -19,6 +19,19 @@ namespace Mars
             yon_sayisi = Yonlistesi.Find(y => y.yon == _yon).Id;
         }
 
+        public string Right()
+        {
+            yon_sayisi = yon_sayisi + 1 > Yonlistesi.Count - 1 ? 0 : yon_sayisi + 1;
+            return this.bilgi();
+        }
+
+        public string Left()
+        {
+            yon_sayisi = yon_sayisi - 1 < 0 ? Yonlistesi.Count - 1 : yon_sayisi - 1;
+            return this.bilgi();
+
+        }
+
         public string bilgi()
         {
             return (x.ToString() + "," + y.ToString() + "," + Yonlistesi.Find(y => y.Id == yon_sayisi).yon);
