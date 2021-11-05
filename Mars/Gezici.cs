@@ -18,5 +18,10 @@ namespace Mars
             //Yön sayısı ve yon id eşleştirilerek yon sayısı tespit edildi.
             yon_sayisi = Yonlistesi.Find(y => y.yon == _yon).Id;
         }
+
+        public string bilgi()
+        {
+            return (x.ToString() + "," + y.ToString() + "," + Yonlistesi.Find(y => y.Id == yon_sayisi).yon);
+        }
     }
 }
