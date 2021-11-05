@@ -30,5 +30,23 @@ namespace Mars
             Geziciler.Add(new Gezici(_x, _y, yon, Yonlistesi));
         }
 
+        public string GeziciHareket(int gezicisira, char key)
+        {
+            switch (key.ToString().ToLower())
+            {
+                case "m":
+                    return Geziciler[gezicisira].Move(x, y);
+
+                case "l":
+                    return Geziciler[gezicisira].Left();
+
+                case "r":
+                    return Geziciler[gezicisira].Right();
+
+                default:
+                    return "Geçerli bir işlem giriniz.";
+            }
+        }
+
     }
 }
