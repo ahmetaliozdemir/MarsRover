@@ -48,5 +48,10 @@ namespace Mars
             }
         }
 
+        public int GeziciSayisi()
+        {
+            return Geziciler.Count;
+        }
+
     }
 }
