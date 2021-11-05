@@ -9,6 +9,7 @@ namespace Mars
         private int x;
         private int y;
         List<Yon> Yonlistesi = new List<Yon>();
+        List<Gezici> Geziciler = new List<Gezici>();
 
 
         public Plato(int _x, int _y)
@@ -20,5 +21,14 @@ namespace Mars
             Yonlistesi.Add(new Yon() { Id = 2, yon = 'S' });
             Yonlistesi.Add(new Yon() { Id = 3, yon = 'W' });
         }
+
+        public void GeziciEkle(int _x, int _y, char yon)
+        {
+            _x = _x < 0 ? 0 : _x;
+            _x = _x > x ? x : _x;
+
+            Geziciler.Add(new Gezici(_x, _y, yon, Yonlistesi));
+        }
+
     }
 }
