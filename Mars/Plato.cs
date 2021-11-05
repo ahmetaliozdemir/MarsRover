@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Mars
 {
@@ -8,10 +9,17 @@ namespace Mars
         private int x;
         private int y;
 
+        List<Yon> Yonlistesi = new List<Yon>();
+
+
         public Plato(int _x, int _y)
         {
             x = _x;
             y = _y;
+            Yonlistesi.Add(new Yon() { Id = 0, yon = 'N' });
+            Yonlistesi.Add(new Yon() { Id = 1, yon = 'E' });
+            Yonlistesi.Add(new Yon() { Id = 2, yon = 'S' });
+            Yonlistesi.Add(new Yon() { Id = 3, yon = 'W' });
         }
     }
 }
